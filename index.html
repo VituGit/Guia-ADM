@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1e40af">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Guia Rápido - Administração Pública UFRN</title>
+    <meta name="description" content="Guia rápido com informações essenciais para estudantes de Administração Pública da UFRN - Otimizado para mobile">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ufrn-blue': '#1e40af',
+                        'ufrn-green': '#059669',
+                        'ufrn-light-blue': '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 mobile-optimized">    <!-- Header/Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-university text-2xl text-ufrn-blue"></i>
+                    <div>
+                        <h1 class="text-xl font-bold text-ufrn-blue">Guia Rápido</h1>
+                        <p class="text-sm text-gray-600">Administração Pública UFRN</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#inicio" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-home mr-1"></i> Início
+                    </a>
+                    <a href="#rcg" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-book mr-1"></i> RCG
+                    </a>
+                    <a href="#ppc" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-graduation-cap mr-1"></i> PPC
+                    </a>
+                    <a href="#calendario" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-calendar mr-1"></i> Calendário
+                    </a>
+                    <a href="#estagio" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-briefcase mr-1"></i> Estágio
+                    </a>                    <a href="#faq" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-question-circle mr-1"></i> FAQ
+                    </a>
+                    <a href="#mapa" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-map-marked-alt mr-1"></i> Mapa
+                    </a>
+                    <a href="#quiz" class="nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-brain mr-1"></i> Quiz
+                    </a>
+                </div>                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-ufrn-blue focus:outline-none mobile-optimized p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#inicio" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-home mr-2"></i> Início
+                    </a>
+                    <a href="#rcg" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-book mr-2"></i> RCG
+                    </a>
+                    <a href="#ppc" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-graduation-cap mr-2"></i> PPC
+                    </a>
+                    <a href="#calendario" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-calendar mr-2"></i> Calendário
+                    </a>
+                    <a href="#estagio" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-briefcase mr-2"></i> Estágio
+                    </a>                    <a href="#faq" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-question-circle mr-2"></i> FAQ
+                    </a>
+                    <a href="#mapa" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-map-marked-alt mr-2"></i> Mapa
+                    </a>
+                    <a href="#quiz" class="nav-link mobile-nav-link text-gray-700 hover:text-ufrn-blue transition-colors px-3 py-2 rounded-md font-medium">
+                        <i class="fas fa-brain mr-2"></i> Quiz
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">        <!-- Início Section -->
+        <section id="inicio" class="min-h-screen bg-gradient-to-br from-ufrn-blue to-ufrn-light-blue text-white">
+            <div class="container mx-auto px-4 py-8 md:py-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="mb-6 md:mb-8">
+                        <i class="fas fa-university text-4xl md:text-6xl mb-4 md:mb-6 animate-bounce"></i>
+                        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">
+                            Guia Rápido
+                        </h1>
+                        <h2 class="text-xl sm:text-2xl md:text-3xl mb-6 md:mb-8 text-blue-100">
+                            Administração Pública UFRN
+                        </h2>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-8 mb-8 md:mb-12">
+                        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed mb-4 md:mb-6">
+                            Bem-vindo ao seu guia de sobrevivência acadêmica! 🎓
+                        </p>
+                        <p class="text-base md:text-lg leading-relaxed mb-6 md:mb-8">
+                            Aqui você encontra tudo que precisa saber sobre o curso de Administração Pública da UFRN: 
+                            regulamentos, estrutura curricular, calendário acadêmico, orientações sobre estágio e muito mais.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+                        <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 md:p-6">
+                            <i class="fas fa-rocket text-2xl md:text-3xl mb-3 md:mb-4"></i>
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Rápido e Prático</h3>
+                            <p class="text-sm md:text-base">Informações organizadas e fáceis de encontrar</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 md:p-6">
+                            <i class="fas fa-mobile-alt text-2xl md:text-3xl mb-3 md:mb-4"></i>
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Mobile First</h3>
+                            <p class="text-sm md:text-base">Otimizado para celular, acesse de qualquer lugar</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 md:p-6 sm:col-span-2 md:col-span-1">
+                            <i class="fas fa-heart text-2xl md:text-3xl mb-3 md:mb-4"></i>
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Feito com Carinho</h3>
+                            <p class="text-sm md:text-base">Por estudantes, para estudantes</p>
+                        </div>
+                    </div>
+
+                    <a href="#rcg" class="inline-flex items-center bg-ufrn-green hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-arrow-down mr-2"></i>
+                        Começar a Explorar
+                    </a>
+                </div>
+            </div>
+        </section>        <!-- RCG Section -->
+        <section id="rcg" class="py-8 md:py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-8 md:mb-12">
+                        <i class="fas fa-book text-3xl md:text-4xl text-ufrn-blue mb-4"></i>
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                            Regulamento dos Cursos de Graduação (RCG)
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                            Principais regras e normas que todo estudante precisa conhecer
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-12">                        <!-- Frequência -->
+                        <div class="bg-gray-50 rounded-xl p-4 md:p-6 hover:shadow-lg transition-shadow card-hover mobile-optimized">
+                            <div class="flex items-center mb-3 md:mb-4">
+                                <i class="fas fa-calendar-check text-xl md:text-2xl text-ufrn-green mr-3"></i>
+                                <h3 class="text-lg md:text-xl font-semibold">Frequência Mínima</h3>
+                            </div>
+                            <ul class="space-y-2 text-gray-700 text-sm md:text-base">
+                                <li><strong>75%</strong> de frequência obrigatória</li>
+                                <li>Controle por disciplina</li>
+                                <li>Abono apenas com justificativa legal</li>
+                                <li>Reprovação automática < 75%</li>
+                            </ul>
+                        </div>                        <!-- Aprovação -->
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-xl p-4 md:p-6 hover:shadow-lg transition-shadow card-hover mobile-optimized">
+                            <div class="flex items-center mb-3 md:mb-4">
+                                <i class="fas fa-exclamation-triangle text-xl md:text-2xl text-yellow-600 mr-3"></i>
+                                <h3 class="text-lg md:text-xl font-semibold text-yellow-800">Critérios de Aprovação (Atuais)</h3>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg mb-3">
+                                <p class="text-sm font-semibold text-blue-600 mb-2">ℹ️ REGRAS ATUAIS DE APROVAÇÃO:</p>
+                                <ul class="space-y-2 text-gray-700 text-sm md:text-base">
+                                    <li><strong class="text-green-600">REGRA ATUAL:</strong> Média ≥ <strong>6,0</strong> + Rendimento ≥ <strong>4,0</strong> em todas as unidades</li>
+                                    <li><strong class="text-gray-500">REGRA ANTERIOR:</strong> Média ≥ 5,0 + Rendimento ≥ 3,0</li>
+                                    <li>Frequência mínima: <strong>75%</strong> (não mudou)</li>
+                                    <li>Prova final: se 4,0 ≤ média < 6,0</li>
+                                </ul>
+                            </div>
+                            <p class="text-xs text-gray-600 italic">Aprovado pelo Consepe em 2024 após consulta pública</p>
+                        </div>
+
+                        <!-- Trancamento -->
+                        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-pause-circle text-2xl text-ufrn-blue mr-3"></i>
+                                <h3 class="text-xl font-semibold">Trancamento</h3>
+                            </div>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Total:</strong> até 4 semestres</li>
+                                <li><strong>Parcial:</strong> disciplinas específicas</li>
+                                <li>Prazo: conforme calendário</li>
+                                <li>Não conta para tempo máximo</li>
+                            </ul>
+                        </div>
+
+                        <!-- Duração -->
+                        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-clock text-2xl text-ufrn-blue mr-3"></i>
+                                <h3 class="text-xl font-semibold">Duração do Curso</h3>
+                            </div>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Mínimo:</strong> 8 semestres (4 anos)</li>
+                                <li><strong>Máximo:</strong> 12 semestres (6 anos)</li>
+                                <li>Prorrogação excepcional possível</li>
+                                <li>Jubilamento após prazo máximo</li>
+                            </ul>
+                        </div>
+
+                        <!-- Coeficiente -->
+                        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-chart-line text-2xl text-ufrn-green mr-3"></i>
+                                <h3 class="text-xl font-semibold">Coeficiente de Rendimento</h3>
+                            </div>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>CRA = Média ponderada por créditos</li>
+                                <li><strong>Excelente:</strong> ≥ 8,5</li>
+                                <li><strong>Bom:</strong> 7,0 - 8,4</li>
+                                <li><strong>Regular:</strong> 5,0 - 6,9</li>
+                            </ul>
+                        </div>
+
+                        <!-- Transferência -->
+                        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-exchange-alt text-2xl text-ufrn-blue mr-3"></i>
+                                <h3 class="text-xl font-semibold">Transferência e Reopção</h3>
+                            </div>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>Análise de histórico escolar</li>
+                                <li>Aproveitamento de disciplinas</li>
+                                <li>Prazo máximo mantido</li>
+                                <li>Edital específico para processo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Novidades RCG 2024 -->
+                    <div class="bg-gradient-to-r from-blue-50 to-green-50 border border-blue-200 rounded-xl p-6 mb-8">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-newspaper text-3xl text-ufrn-blue mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Principais Mudanças RCG (Vigentes)</h3>
+                            <p class="text-gray-600">Aprovadas pelo Consepe - Vigentes desde 2024</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Notas de Aprovação -->
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-red-400">
+                                <h4 class="font-semibold text-red-700 mb-2">📈 Notas de Aprovação</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li><strong>Antes:</strong> Média ≥ 5,0 + Rendimento ≥ 3,0</li>
+                                    <li><strong>Agora:</strong> Média ≥ 6,0 + Rendimento ≥ 4,0</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tipos de Formação -->
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                                <h4 class="font-semibold text-green-700 mb-2">🎓 Tipos de Formação</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li><strong>Generalista:</strong> Com ênfases específicas</li>
+                                    <li><strong>Associada:</strong> Básica + especializada</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Outras Mudanças -->
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                                <h4 class="font-semibold text-blue-700 mb-2">📋 Outras Alterações</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Flexibilização de pré-requisitos</li>
+                                    <li>• Novos critérios de mérito acadêmico</li>
+                                    <li>• Mudanças no preenchimento de vagas</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Impacto -->
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-yellow-400">
+                                <h4 class="font-semibold text-yellow-700 mb-2">📊 Impacto Esperado</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Simulações indicam baixo impacto</li>
+                                    <li>• Alinhamento com outras universidades</li>
+                                    <li>• Média nacional entre 6,0 e 7,0</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-6 p-4 bg-blue-100 rounded-lg">
+                            <p class="text-sm text-blue-800">
+                                <i class="fas fa-info-circle mr-1"></i>
+                                <strong>Fonte:</strong> Consepe/UFRN - Consulta pública realizada com a comunidade universitária
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Link para PDF Oficial -->
+                    <div class="text-center">
+                        <a href="https://sistemas.ufrn.br/download/sigaa/public/regulamento_dos_cursos_de_graduacao.pdf" 
+                           target="_blank" 
+                           class="inline-flex items-center bg-ufrn-blue hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-file-pdf mr-2"></i>
+                            Acessar RCG Completo (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PPC Section -->
+        <section id="ppc" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <i class="fas fa-graduation-cap text-4xl text-ufrn-green mb-4"></i>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            Projeto Pedagógico do Curso (PPC)
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Estrutura curricular e organização do curso de Administração Pública
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <!-- Informações Básicas -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-ufrn-blue mb-6 flex items-center">
+                                <i class="fas fa-info-circle mr-3"></i>
+                                Informações Básicas
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between border-b pb-2">
+                                    <span class="font-semibold">Duração:</span>
+                                    <span>8 semestres (4 anos)</span>
+                                </div>
+                                <div class="flex justify-between border-b pb-2">
+                                    <span class="font-semibold">Carga Horária Total:</span>
+                                    <span>2.430 horas</span>
+                                </div>
+                                <div class="flex justify-between border-b pb-2">
+                                    <span class="font-semibold">Modalidade:</span>
+                                    <span>Presencial</span>
+                                </div>
+                                <div class="flex justify-between border-b pb-2">
+                                    <span class="font-semibold">Turno:</span>
+                                    <span>Vespertino/Noturno</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">Grau:</span>
+                                    <span>Bacharel</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Estrutura Curricular -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-ufrn-blue mb-6 flex items-center">
+                                <i class="fas fa-layer-group mr-3"></i>
+                                Estrutura Curricular
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-ufrn-blue mb-2">Disciplinas Obrigatórias</h4>
+                                    <p class="text-sm text-gray-600">Core do curso com conteúdos fundamentais</p>
+                                </div>
+                                <div class="bg-green-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-ufrn-green mb-2">Disciplinas Optativas</h4>
+                                    <p class="text-sm text-gray-600">Flexibilização e aprofundamento</p>
+                                </div>
+                                <div class="bg-yellow-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-yellow-600 mb-2">Atividades Complementares</h4>
+                                    <p class="text-sm text-gray-600">200 horas de atividades diversas</p>
+                                </div>
+                                <div class="bg-purple-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-purple-600 mb-2">TCC</h4>
+                                    <p class="text-sm text-gray-600">Trabalho de Conclusão de Curso</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eixos Formativos -->
+                    <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold text-ufrn-blue mb-6 text-center flex items-center justify-center">
+                            <i class="fas fa-sitemap mr-3"></i>
+                            Eixos Formativos
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-cogs text-2xl text-ufrn-blue"></i>
+                                </div>
+                                <h4 class="font-semibold mb-2">Formação Básica</h4>
+                                <p class="text-sm text-gray-600">Fundamentos teóricos e metodológicos</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-users text-2xl text-ufrn-green"></i>
+                                </div>
+                                <h4 class="font-semibold mb-2">Formação Profissional</h4>
+                                <p class="text-sm text-gray-600">Conhecimentos específicos da área</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-lightbulb text-2xl text-purple-600"></i>
+                                </div>
+                                <h4 class="font-semibold mb-2">Formação Complementar</h4>
+                                <p class="text-sm text-gray-600">Atividades integradoras e práticas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendário Section -->
+        <section id="calendario" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <i class="fas fa-calendar-alt text-4xl text-ufrn-blue mb-4"></i>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            Calendário Acadêmico
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Principais prazos e datas importantes do ano letivo
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <!-- Datas Importantes -->
+                        <div class="bg-gray-50 rounded-xl p-8">
+                            <h3 class="text-2xl font-bold text-ufrn-blue mb-6 flex items-center">
+                                <i class="fas fa-clock mr-3"></i>
+                                Datas Importantes 2025
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 font-bold">
+                                        JAN
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Início das Aulas - 1º Semestre</h4>
+                                        <p class="text-sm text-gray-600">Retorno do período letivo</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 font-bold">
+                                        MAR
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Período de Ajuste de Matrícula</h4>
+                                        <p class="text-sm text-gray-600">Inclusão e exclusão de disciplinas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 font-bold">
+                                        JUN
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Final do 1º Semestre</h4>
+                                        <p class="text-sm text-gray-600">Provas finais e encerramento</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 font-bold">
+                                        AGO
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Início das Aulas - 2º Semestre</h4>
+                                        <p class="text-sm text-gray-600">Novo período letivo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dicas de Organização -->
+                        <div class="bg-gray-50 rounded-xl p-8">
+                            <h3 class="text-2xl font-bold text-ufrn-green mb-6 flex items-center">
+                                <i class="fas fa-lightbulb mr-3"></i>
+                                Dicas de Organização
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
+                                    <h4 class="font-semibold text-gray-800 mb-2">📅 Use uma Agenda</h4>
+                                    <p class="text-sm text-gray-600">Anote todas as datas importantes e prazos</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-green-500">
+                                    <h4 class="font-semibold text-gray-800 mb-2">⏰ Defina Lembretes</h4>
+                                    <p class="text-sm text-gray-600">Configure alertas para não perder prazos</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-yellow-500">
+                                    <h4 class="font-semibold text-gray-800 mb-2">📊 Acompanhe o SIGAA</h4>
+                                    <p class="text-sm text-gray-600">Verifique regularmente o sistema acadêmico</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
+                                    <h4 class="font-semibold text-gray-800 mb-2">👥 Conecte-se</h4>
+                                    <p class="text-sm text-gray-600">Mantenha contato com colegas e professores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prazos Críticos -->
+                    <div class="bg-red-50 rounded-xl p-8 border-l-4 border-red-500">
+                        <h3 class="text-xl font-bold text-red-600 mb-4 flex items-center">
+                            <i class="fas fa-exclamation-triangle mr-3"></i>
+                            Atenção aos Prazos Críticos!
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Matrícula</h4>
+                                <p class="text-sm text-gray-600">Período limitado para renovação</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Trancamento</h4>
+                                <p class="text-sm text-gray-600">Prazo específico no calendário</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Provas de Segunda Chamada</h4>
+                                <p class="text-sm text-gray-600">Justificativa obrigatória</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estágio Section -->
+        <section id="estagio" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <i class="fas fa-briefcase text-4xl text-ufrn-green mb-4"></i>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            Estágio Supervisionado
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Não é obrigatório, mas é altamente recomendado para sua formação profissional
+                        </p>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-xl p-8 mb-8 border-l-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-info-circle text-2xl text-blue-600 mr-3"></i>
+                            <h3 class="text-xl font-bold text-blue-800">Informação Importante</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            O curso de Administração Pública da UFRN <strong>não possui estágio obrigatório</strong>, 
+                            mas oferece a possibilidade de estágio não obrigatório que pode ser aproveitado como 
+                            atividade complementar.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <!-- Pré-requisitos -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-ufrn-blue mb-6 flex items-center">
+                                <i class="fas fa-clipboard-check mr-3"></i>
+                                Pré-requisitos
+                            </h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>Estar matriculado no curso</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>Ter cursado pelo menos 50% das disciplinas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>CRA mínimo de 5,0</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>Não estar em situação de probation</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Como Registrar -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-ufrn-blue mb-6 flex items-center">
+                                <i class="fas fa-file-signature mr-3"></i>
+                                Como Registrar
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">1. Encontre uma Vaga</h4>
+                                    <p class="text-sm text-gray-600">Busque oportunidades em órgãos públicos ou ONGs</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">2. Procure a Coordenação</h4>
+                                    <p class="text-sm text-gray-600">Apresente a proposta de estágio</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">3. Documentação</h4>
+                                    <p class="text-sm text-gray-600">Termo de compromisso e plano de atividades</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">4. Acompanhamento</h4>
+                                    <p class="text-sm text-gray-600">Relatórios periódicos e avaliação final</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aproveitamento como Atividade Complementar -->
+                    <div class="bg-green-50 rounded-xl p-8 border-l-4 border-green-500">
+                        <h3 class="text-xl font-bold text-green-600 mb-4 flex items-center">
+                            <i class="fas fa-star mr-3"></i>
+                            Aproveitamento como Atividade Complementar
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Horas Aproveitáveis</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Máximo de 120 horas das 200 exigidas</li>
+                                    <li>• 1 hora de estágio = 1 hora complementar</li>
+                                    <li>• Área: Atividades Profissionais</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Documentos Necessários</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Termo de compromisso</li>
+                                    <li>• Relatório final de atividades</li>
+                                    <li>• Avaliação do supervisor</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa Section -->
+        <section id="mapa" class="py-8 md:py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-8 md:mb-12">
+                        <i class="fas fa-map-marked-alt text-3xl md:text-4xl text-ufrn-blue mb-4"></i>
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                            Mapa do Campus Central UFRN
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                            Localize facilmente os principais prédios e setores do campus
+                        </p>
+                    </div>                    <!-- Mapa Principal -->
+                    <div class="bg-gray-50 rounded-xl p-4 md:p-8 mb-8 shadow-lg">
+                        <div class="relative">                            <img 
+                                src="mapacampuscentral.png" 
+                                alt="Mapa do Campus Central UFRN" 
+                                class="w-full h-auto rounded-lg shadow-md"
+                                style="max-height: 600px; object-fit: contain;"
+                                loading="lazy"
+                            />
+                            <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-lg p-2 text-xs">
+                                <p class="font-semibold text-gray-700">Campus Central UFRN</p>
+                                <p class="text-gray-600">Natal - RN</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Curso de Administração Pública -->
+                    <div class="bg-gradient-to-r from-ufrn-blue to-ufrn-green text-white rounded-xl p-6 mb-8">
+                        <div class="text-center">
+                            <i class="fas fa-graduation-cap text-3xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">📍 Onde fica o Curso de Administração Pública?</h3>
+                            <p class="text-lg mb-4">O curso está localizado no <strong>CCSA - Centro de Ciências Sociais Aplicadas</strong></p>
+                            <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                                <p class="text-sm">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    <strong>Zona 04 (Roxa)</strong> - CCSA - Centro de Ciências Sociais Aplicadas
+                                </p>
+                                <p class="text-sm mt-2">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    Aqui ficam as salas de aula, coordenação do curso e professores do departamento
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dicas de Navegação -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-blue-800 mb-4 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            Dicas para se Localizar no Campus
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-blue-700 mb-2">🗺️ Pontos de Referência</h4>
+                                <ul class="text-sm space-y-1 text-blue-700">
+                                    <li>• Use a Biblioteca Central como ponto central</li>
+                                    <li>• A Reitoria fica na zona azul (centro)</li>
+                                    <li>• O Restaurante fica na zona vermelha</li>
+                                    <li>• CCSA fica na zona roxa (lado direito)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-blue-700 mb-2">📱 Apps Úteis</h4>
+                                <ul class="text-sm space-y-1 text-blue-700">
+                                    <li>• Google Maps (Campus UFRN)</li>
+                                    <li>• SIGAA Mobile</li>
+                                    <li>• Pergunte aos veteranos!</li>
+                                    <li>• Portaria e seguranças sempre ajudam</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <i class="fas fa-brain text-4xl text-ufrn-green mb-4"></i>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            Quiz: Teste seus Conhecimentos
+                        </h2>
+                        <p class="text-xl text-gray-600">
+                            Verifique o quanto você sabe sobre as normas do curso
+                        </p>
+                    </div>
+
+                    <div id="quiz-container" class="bg-white rounded-xl p-8 shadow-lg">
+                        <!-- Quiz Header -->
+                        <div class="flex justify-between items-center mb-8">
+                            <div>
+                                <h3 id="question-counter" class="text-lg font-semibold text-gray-800">Pergunta 1 de 10</h3>
+                                <div class="w-64 bg-gray-200 rounded-full h-2 mt-2">
+                                    <div id="progress-bar" class="bg-ufrn-blue h-2 rounded-full transition-all duration-300" style="width: 10%"></div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-600">Pontuação</p>
+                                <p id="score" class="text-2xl font-bold text-ufrn-green">0</p>
+                            </div>
+                        </div>
+
+                        <!-- Question -->
+                        <div id="question-container" class="mb-8">
+                            <h4 id="question-text" class="text-xl font-semibold text-gray-800 mb-6">
+                                Carregando pergunta...
+                            </h4>
+                            <div id="options-container" class="space-y-3">
+                                <!-- Options will be inserted here by JavaScript -->
+                            </div>
+                        </div>                        <!-- Quiz Controls -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-between items-center">
+                            <button id="prev-btn" class="w-full sm:w-auto px-6 py-3 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mobile-optimized min-h-[48px]" disabled>
+                                <i class="fas fa-arrow-left mr-2"></i>Anterior
+                            </button>
+                            <button id="next-btn" class="w-full sm:w-auto px-6 py-3 bg-ufrn-blue text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mobile-optimized min-h-[48px]" disabled>
+                                Próxima<i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Results Container (hidden initially) -->
+                        <div id="results-container" class="hidden text-center">
+                            <div class="mb-6">
+                                <i id="result-icon" class="text-6xl mb-4"></i>
+                                <h3 id="result-title" class="text-2xl font-bold mb-2"></h3>
+                                <p id="result-message" class="text-gray-600 mb-4"></p>
+                                <div class="bg-gray-100 rounded-lg p-4 inline-block">
+                                    <p class="text-sm text-gray-600">Sua pontuação final</p>
+                                    <p id="final-score" class="text-3xl font-bold text-ufrn-blue"></p>
+                                </div>
+                            </div>                            <button id="restart-btn" class="w-full sm:w-auto px-8 py-3 bg-ufrn-green text-white rounded-lg hover:bg-green-600 transition-colors mobile-optimized min-h-[48px] text-lg">
+                                <i class="fas fa-redo mr-2"></i>Tentar Novamente
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <!-- About -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-university mr-2"></i>
+                            Guia Rápido
+                        </h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Site desenvolvido por estudantes para auxiliar na jornada acadêmica do curso de 
+                            Administração Pública da UFRN.
+                        </p>
+                    </div>
+
+                    <!-- Links Úteis -->
+                    <div>
+                        <h4 class="font-semibold mb-4">Links Úteis</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="https://sigaa.ufrn.br" target="_blank" class="text-gray-300 hover:text-white transition-colors">SIGAA</a></li>
+                            <li><a href="https://sistemas.ufrn.br/download/sigaa/public/regulamento_dos_cursos_de_graduacao.pdf" target="_blank" class="text-gray-300 hover:text-white transition-colors">RCG (PDF)</a></li>
+                            <li><a href="https://ufrn.br" target="_blank" class="text-gray-300 hover:text-white transition-colors">Site da UFRN</a></li>
+                            <li><a href="https://ccsa.ufrn.br" target="_blank" class="text-gray-300 hover:text-white transition-colors">CCSA</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contato -->
+                    <div>
+                        <h4 class="font-semibold mb-4">Contato</h4>
+                        <div class="space-y-2 text-sm text-gray-300">
+                            <p><i class="fas fa-envelope mr-2"></i>coordenacao.admpublica@ufrn.br</p>
+                            <p><i class="fas fa-phone mr-2"></i>(84) 3342-2000</p>
+                            <p><i class="fas fa-map-marker-alt mr-2"></i>CCSA - UFRN, Natal/RN</p>
+                        </div>
+                    </div>
+
+                    <!-- Navegação -->
+                    <div>
+                        <h4 class="font-semibold mb-4">Navegação</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#inicio" class="text-gray-300 hover:text-white transition-colors">Início</a></li>
+                            <li><a href="#rcg" class="text-gray-300 hover:text-white transition-colors">RCG</a></li>
+                            <li><a href="#ppc" class="text-gray-300 hover:text-white transition-colors">PPC</a></li>
+                            <li><a href="#calendario" class="text-gray-300 hover:text-white transition-colors">Calendário</a></li>
+                            <li><a href="#estagio" class="text-gray-300 hover:text-white transition-colors">Estágio</a></li>
+                            <li><a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                            <li><a href="#quiz" class="text-gray-300 hover:text-white transition-colors">Quiz</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 pt-8 text-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 Guia Rápido - Administração Pública UFRN. 
+                        Desenvolvido com ❤️ por estudantes para estudantes.
+                    </p>
+                    <p class="text-gray-500 text-xs mt-2">
+                        Este site é um projeto estudantil independente e não possui vínculo oficial com a UFRN.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
