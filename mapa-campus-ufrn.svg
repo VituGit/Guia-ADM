@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#f0f9ff"/>
+  
+  <!-- Campus outline -->
+  <path d="M50 100 Q50 50 100 50 L1100 50 Q1150 50 1150 100 L1150 500 Q1150 550 1100 550 L100 550 Q50 550 50 500 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+  
+  <!-- Zona 01 - Prata (Amarelo) -->
+  <g id="zona-prata">
+    <path d="M80 120 L400 120 L400 280 L80 280 Z" fill="#fbbf24" opacity="0.8"/>
+    <text x="240" y="200" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#92400e">ZONA 01 - PRATA</text>
+    <text x="240" y="220" text-anchor="middle" font-family="Arial" font-size="12" fill="#92400e">COMPERVE • ARTES • SEDIS</text>
+    <text x="240" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#92400e">CAPELA • MÚSICA</text>
+  </g>
+  
+  <!-- Zona 02 - Verde -->
+  <g id="zona-verde">
+    <path d="M420 120 L580 120 L580 280 L420 280 Z" fill="#10b981" opacity="0.8"/>
+    <text x="500" y="190" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#065f46">ZONA 02 - VERDE</text>
+    <text x="500" y="210" text-anchor="middle" font-family="Arial" font-size="12" fill="#065f46">NUPLAM • MUSEU</text>
+    <text x="500" y="225" text-anchor="middle" font-family="Arial" font-size="12" fill="#065f46">CB - BIOCIÊNCIAS</text>
+  </g>
+  
+  <!-- Zona Central - Azul -->
+  <g id="zona-azul">
+    <path d="M600 120 L800 120 L800 280 L600 280 Z" fill="#3b82f6" opacity="0.8"/>
+    <text x="700" y="190" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#1e40af">ZONA CENTRAL</text>
+    <text x="700" y="210" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e40af">REITORIA</text>
+    <text x="700" y="225" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e40af">BIBLIOTECA CENTRAL</text>
+  </g>
+  
+  <!-- Zona 03 - Laranja -->
+  <g id="zona-laranja">
+    <path d="M80 300 L500 300 L500 480 L80 480 Z" fill="#f97316" opacity="0.8"/>
+    <text x="290" y="380" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#ea580c">ZONA 03 - LARANJA</text>
+    <text x="290" y="400" text-anchor="middle" font-family="Arial" font-size="12" fill="#ea580c">SETOR III • CCET • CT</text>
+    <text x="290" y="415" text-anchor="middle" font-family="Arial" font-size="12" fill="#ea580c">ICT • LABORATÓRIOS</text>
+  </g>
+  
+  <!-- Zona 04 - Roxa (CCSA) -->
+  <g id="zona-roxa">
+    <path d="M520 300 L900 300 L900 480 L520 480 Z" fill="#a855f7" opacity="0.8"/>
+    <text x="710" y="370" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed">ZONA 04 - ROXA</text>
+    <text x="710" y="390" text-anchor="middle" font-family="Arial" font-size="12" fill="#7c3aed">SETOR II • CCHLA • CE</text>
+    <text x="710" y="405" text-anchor="middle" font-family="Arial" font-size="12" fill="#7c3aed">SETOR V • CCSA</text>
+    <!-- Destaque para CCSA -->
+    <rect x="640" y="420 " width="140" height="40" fill="#7c3aed" stroke="#ffffff" stroke-width="2" rx="5"/>
+    <text x="710" y="435" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#ffffff">🎓 CCSA</text>
+    <text x="710" y="450" text-anchor="middle" font-family="Arial" font-size="12" fill="#ffffff">Adm. Pública</text>
+  </g>
+  
+  <!-- Zona 05 - Vermelha -->
+  <g id="zona-vermelha">
+    <path d="M920 120 L1120 120 L1120 480 L920 480 Z" fill="#dc2626" opacity="0.8"/>
+    <text x="1020" y="280" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#991b1b">ZONA 05</text>
+    <text x="1020" y="300" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#991b1b">VERMELHA</text>
+    <text x="1020" y="320" text-anchor="middle" font-family="Arial" font-size="12" fill="#991b1b">ESPORTES • GINÁSIOS</text>
+    <text x="1020" y="335" text-anchor="middle" font-family="Arial" font-size="12" fill="#991b1b">RESTAURANTE • IMD</text>
+  </g>
+  
+  <!-- Compass -->
+  <g id="compass" transform="translate(100, 500)">
+    <circle cx="0" cy="0" r="25" fill="#ffffff" stroke="#374151" stroke-width="2"/>
+    <path d="M 0 -20 L 8 0 L 0 20 L -8 0 Z" fill="#ef4444"/>
+    <text x="0" y="-35" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#374151">N</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 50)">
+    <rect x="0" y="0" width="300" height="60" fill="#ffffff" stroke="#9ca3af" stroke-width="1" rx="5" opacity="0.9"/>
+    <text x="10" y="20" font-family="Arial" font-size="14" font-weight="bold" fill="#374151">MAPA DO CAMPUS CENTRAL UFRN</text>
+    <text x="10" y="35" font-family="Arial" font-size="12" fill="#6b7280">Natal - RN</text>
+    <text x="10" y="50" font-family="Arial" font-size="10" fill="#9ca3af">Clique nas zonas para mais informações</text>
+  </g>
+  
+  <!-- Streets and paths -->
+  <path d="M80 290 L1120 290" stroke="#6b7280" stroke-width="2" opacity="0.5"/>
+  <path d="M410 120 L410 480" stroke="#6b7280" stroke-width="2" opacity="0.5"/>
+  <path d="M590 120 L590 480" stroke="#6b7280" stroke-width="2" opacity="0.5"/>
+  <path d="M810 120 L810 480" stroke="#6b7280" stroke-width="2" opacity="0.5"/>
+  <path d="M910 120 L910 480" stroke="#6b7280" stroke-width="2" opacity="0.5"/>
+</svg>
