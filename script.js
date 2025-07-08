@@ -31,9 +31,9 @@ const QUIZ_QUESTIONS = [
     },
     {
         question: "Qual é a carga horária total do curso?",
-        options: ["2.000 horas", "2.430 horas", "2.800 horas", "3.000 horas"],
+        options: ["2.000 horas", "3.000 horas", "2.800 horas", "2.430 horas"],
         correct: 1,
-        explanation: "A carga horária total do curso é de 2.430 horas, incluindo disciplinas e atividades complementares."
+        explanation: "A carga horária total do curso é de 3.000 horas, incluindo disciplinas e atividades complementares."
     },
     {
         question: "Quantas horas de atividades complementares são exigidas?",
